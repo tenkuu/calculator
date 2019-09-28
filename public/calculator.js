@@ -57,17 +57,22 @@ function calcWeight() {
 	
 	for (var i = 0; i < numRows; i++) {
 		if (!(isNaN(points[i].value) || points[i].value === "" || points[i].value < 0 || isNaN(total[i].value) || total[i].value <= 0)) {
-			if (!(isNaN(weight[i].value) || weight[i].value < 0)) {
+			if (!(isNaN(weight[i].value) || weight[i].value < 0 || weight[i].value === "")) {
 				per += (points[i].value / total[i].value) * eval(weight[i].value);
 				count += eval(weight[i].value);
 			}
 		}
 	}
 	
-	var wei =  per / count * 100;
-	wei = +wei.toFixed(3);
+	if (count != 0) {
+		var wei =  per / count * 100;
+		wei = +wei.toFixed(3);
 	
-	result.innerHTML = wei + "%";
+		result.innerHTML = wei + "%";
+	}
+	else {
+		result.innerHTML = "";
+	}
 }
 weightB.onclick= calcWeight;
 
@@ -82,3 +87,32 @@ function resetInputs() {
 	result.innerHTML = "";
 }
 resetB.onclick = resetInputs;
+
+
+
+function addRow() {
+	numRows++;
+	
+	var tab = document.getElementById("mainTable");
+	var row = tab.insertRow(-1);
+	
+	var name = row.insertCell(0);
+	name.innerHTML = "Activity " + numRows;
+	
+	var sname = row.insertCell(1);
+	sname.innerHTML = "A" + numRows;
+	
+	var weig = row.insertCell(2);
+	weig.innerHTML = "<input class='weight' type='text'></input>";
+	
+	var grade = row.insertCell(3);
+	grade.innerHTML = "<input class='points' style='margin-bottom: 5px;'></input> / <br> <input class='total'></input>";
+	
+	var perc = row.insertCell(4);
+	perc.classList.add("percent");
+	
+	updateEventListener();
+	
+	window.scrollTo(0,document.body.scrollHeight);
+}
+addRowB.onclick = addRow;

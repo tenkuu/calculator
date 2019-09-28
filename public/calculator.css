@@ -4,16 +4,16 @@ html, body {
 	margin: 0px;
 }
 
+body {
+	overflow-y: auto;
+}
+
 #main {
 	background-color: white;
-	position: absolute;
-	margin-right: 5%;
-	margin-left: 5%;
-	margin-bottom: 5%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	margin-right: 100px;
+	margin-left: 100px;
+	margin-bottom: 100px;
+	height: auto;
 	border-top: 20px solid #3C3834;
 	border-bottom: 35px solid #3C3834;
 }
@@ -26,16 +26,12 @@ h1 {
 
 #calcBox {
 	margin-left: 40px;
-	margin-top: 140px;
+	margin-top: 20px;
 	margin-bottom: 20px;
-	margin-right: 20%;
+	margin-right: 200px;
 	background-color: #E9EFF1;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
 	padding: 20px;
+	overflow: auto;
 }
 
 h4 {
@@ -78,10 +74,23 @@ tr:first-child {
 	font-family: sans-serif;
 }
 
+#result {
+	min-height: 20px;
+}
 
-button {
+
+#meanB, #weightB {
 	 float: right;
 	 margin-left: 10px;
+	 background-color: #B5111A;
+	 border: none;
+	 color: white;
+	 padding: 5px 10px;
+}
+
+#resetB, #addRowB {
+	 float: left;
+	 margin-right: 10px;
 	 background-color: #B5111A;
 	 border: none;
 	 color: white;
