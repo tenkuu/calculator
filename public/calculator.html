@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Coursys - Formula Tester</title>
+  <meta name="description" content="Grade Calculator">
+  <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+  <div id="main">
+	<h1>Grade Calculator</h1>
+	<div id="calcBox">
+		<h4>Activities</h4>
+		<h5>Give grades to the numeric activities:</h5>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Short Name</th>
+				<th>Weight</th>
+				<th>Grade</th>
+				<th>Percent</th>
+			</tr>
+			<tr>
+				<td>Activity 1</td>
+				<td>A1</td>
+				<td><input id="A1weight" type="text"></input></td>
+				<td>
+					<input id="A1points" style="margin-bottom: 5px;"></input> /
+					<br>
+					<input id="A1total"></input>
+				</td>
+				<td id="A1per"></td>
+			</tr>
+			<tr>
+				<td>Activity 2</td>
+				<td>A2</td>
+				<td><input id="A2weight" type="text"></input></td>
+				<td>
+					<input id="A2points" style="margin-bottom: 5px;"></input> /
+					<br>
+					<input id="A2total"></input>
+				</td>
+				<td id="A2per"></td>
+			</tr>
+			<tr>
+				<td>Activity 3</td>
+				<td>A3</td>
+				<td><input id="A3weight" type="text"></input></td>
+				<td>
+					<input id="A3points" style="margin-bottom: 5px;"></input> /
+					<br>
+					<input id="A3total"></input>
+				</td>
+				<td id="A3per"></td>
+			</tr>
+			<tr>
+				<td>Activity 4</td>
+				<td>A4</td>
+				<td><input id="A4weight" type="text"></input></td>
+				<td>
+					<input id="A4points" style="margin-bottom: 5px;"></input> /
+					<br>
+					<input id="A4total"></input>
+				</td>
+				<td id="A4per"></td>
+			</tr>
+		</table>
+		
+		<h4>Result</h4>
+		<h5 id="result"></h5>
+		
+		<button id="meanB">MEAN</button>
+		<button id="weightB">WEIGHTED</button>
+		<button id="resetB">RESET</button>
+	</div>
+  </div>
+  <script src="calculator.js"></script>
+</body>
+</html>
