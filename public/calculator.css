@@ -1,6 +1,5 @@
 html, body {
 	background-color: #a6192e;
-	height: 100%;
 	margin: 0px;
 }
 
@@ -11,6 +10,7 @@ body {
 
 
 
+/* White box with black borders */
 #main {
 	background-color: white;
 	margin-right: 100px;
@@ -24,6 +24,7 @@ body {
 
 
 
+/* Headers */
 h1 {
 	margin-left: 40px;
 	margin-top: 80px;
@@ -42,6 +43,7 @@ h5 {
 
 
 
+/* Light blue/grey box */
 #calcBox {
 	margin-left: 40px;
 	margin-top: 20px;
@@ -100,6 +102,7 @@ th:nth-child(3). th:nth-child(4) {
 
 
 
+/* Result field and buttons */
 #result {
 	min-height: 25px;
 }
