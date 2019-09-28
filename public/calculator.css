@@ -8,6 +8,9 @@ body {
 	overflow-y: auto;
 }
 
+
+
+
 #main {
 	background-color: white;
 	margin-right: 100px;
@@ -18,23 +21,16 @@ body {
 	border-bottom: 35px solid #3C3834;
 }
 
+
+
+
 h1 {
 	margin-left: 40px;
 	margin-top: 80px;
 	font-family: sans-serif;
 }
 
-#calcBox {
-	margin-left: 40px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-right: 200px;
-	background-color: #E9EFF1;
-	padding: 20px;
-	overflow: auto;
-}
-
-h4 {
+.redH {
 	color: #B5111A;
 	font-family: sans-serif;
 }
@@ -43,16 +39,32 @@ h5 {
 	font-family: sans-serif;
 }
 
+
+
+
+#calcBox {
+	margin-left: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 300px;
+	background-color: #E9EFF1;
+	padding: 20px;
+	overflow: auto;
+}
+
+
+
+
 table {
 	background-color: #E9EFF1;
 	width: 100%;
 	font-family: sans-serif;
+	table-layout: fixed;
 }
 
 table, th, td {
 	border: 1px solid #C2C2C2;
 	border-collapse: collapse;
-
 }
 
 th {
@@ -74,10 +86,23 @@ tr:first-child {
 	font-family: sans-serif;
 }
 
-#result {
-	min-height: 20px;
+th:nth-child(1), th:nth-child(2), th:nth-child(5) {
+	width: 18%;
 }
 
+th:nth-child(3). th:nth-child(4) {
+	width: 23%;
+}
+
+.points, .total, .weight {
+	width: 90px;
+}
+
+
+
+#result {
+	min-height: 25px;
+}
 
 #meanB, #weightB {
 	 float: right;
