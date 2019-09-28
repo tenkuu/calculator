@@ -77,7 +77,7 @@ function resetInputs() {
 	for (var i = 0; i < numRows; i++) {
 		points[i].value = "";
 		total[i].value = "";
-		percent[i].value = "";
+		percent[i].innerHTML = "";
 	}
 	result.innerHTML = "";
 }
